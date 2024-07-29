@@ -4,5 +4,5 @@ namespace MicroserviceTemplate.Domain.Contract;
 
 public interface IUserService
 {
-    User Get(Guid id);
+    Task<User> Get(Guid id);
 }
