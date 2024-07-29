@@ -1,0 +1,31 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "launchUrl": "microservicetemplate/api/swagger",
+      "applicationUrl": "http://localhost:34092",
+      "sslPort": 44389
+    }
+  },
+  "profiles": {  
+    "https": {
+      "commandName": "Project",      
+      "launchBrowser": true,
+      "launchUrl": "microservicetemplate/api/swagger",
+      "applicationUrl": "https://localhost:7024",
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+   "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/users/api/swagger",
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  }
+}

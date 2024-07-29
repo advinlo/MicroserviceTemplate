@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceTemplate.API", "MicroserviceTemplate.API\MicroserviceTemplate.API.csproj", "{BDA973A6-354F-42A8-AEEF-05CDAE9286AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceTemplate.Domain", "MicroserviceTemplate.Domain\MicroserviceTemplate.Domain.csproj", "{60238AA0-11C1-4293-AEE2-D2C209944267}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceTemplate.Application", "MicroserviceTemplate.Application\MicroserviceTemplate.Application.csproj", "{5E274FE1-6CBF-4A5F-8EC5-14140620432A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDA973A6-354F-42A8-AEEF-05CDAE9286AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDA973A6-354F-42A8-AEEF-05CDAE9286AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDA973A6-354F-42A8-AEEF-05CDAE9286AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDA973A6-354F-42A8-AEEF-05CDAE9286AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60238AA0-11C1-4293-AEE2-D2C209944267}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60238AA0-11C1-4293-AEE2-D2C209944267}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60238AA0-11C1-4293-AEE2-D2C209944267}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60238AA0-11C1-4293-AEE2-D2C209944267}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E274FE1-6CBF-4A5F-8EC5-14140620432A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E274FE1-6CBF-4A5F-8EC5-14140620432A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E274FE1-6CBF-4A5F-8EC5-14140620432A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E274FE1-6CBF-4A5F-8EC5-14140620432A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
