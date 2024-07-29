@@ -3,11 +3,14 @@ using Microsoft.OpenApi.Models;
 using MicroserviceTemplate.Application.UseCase;
 using System.Configuration;
 using System.Reflection;
+using MicroserviceTemplate.API;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+ServiceRegistration.Register(builder.Services);
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
