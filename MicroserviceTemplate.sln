@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceTemplate.Domain
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceTemplate.Domain.Contract", "MicroserviceTemplate.Domain.Contract\MicroserviceTemplate.Domain.Contract.csproj", "{4D92AD58-C53B-48D1-B3A7-BF9EA5F94523}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceTemplate.Application.UseCase", "MicroserviceTemplate.Application.UseCase\MicroserviceTemplate.Application.UseCase.csproj", "{7596986E-C54D-4D70-949F-0ECC74EE1F73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{4D92AD58-C53B-48D1-B3A7-BF9EA5F94523}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D92AD58-C53B-48D1-B3A7-BF9EA5F94523}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D92AD58-C53B-48D1-B3A7-BF9EA5F94523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7596986E-C54D-4D70-949F-0ECC74EE1F73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7596986E-C54D-4D70-949F-0ECC74EE1F73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7596986E-C54D-4D70-949F-0ECC74EE1F73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7596986E-C54D-4D70-949F-0ECC74EE1F73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
