@@ -10,9 +10,9 @@ public class UserService : IUserService
 
     }
 
-    public User Get(Guid id){
+    public async Task<User> Get(Guid id){
         var user = new User {
-            id = id,
+            Id = id,
             Username = "Advinlo",
             EmailAddress = "advinlo@advinlo.com",
             RegistrationDate = DateTime.Now
