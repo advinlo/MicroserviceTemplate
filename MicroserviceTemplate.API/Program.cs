@@ -1,5 +1,6 @@
-//using MediatR;
+using MediatR;
 using Microsoft.OpenApi.Models;
+using MicroserviceTemplate.Application.UseCase;
 using System.Configuration;
 using System.Reflection;
 
@@ -14,7 +15,8 @@ builder.Services.AddSwaggerGen(options =>
     
 });
 
-//builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetUserByIdUseCase).Assembly));
 var app = builder.Build();
 
 
