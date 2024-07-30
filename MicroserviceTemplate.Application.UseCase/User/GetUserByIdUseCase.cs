@@ -1,3 +1,4 @@
+using AutoMapper;
 using MediatR;
 using MicroserviceTemplate.Application.DTOs;
 using MicroserviceTemplate.Application.Queries;
@@ -13,27 +14,23 @@ public class GetUserByIdUseCase : IRequestHandler<GetUserQuery, UserDto>
 {
 
     private IUserService _userService;
+    private readonly IMapper _mapper;
 
-    public GetUserByIdUseCase(IUserService userService) {
+    public GetUserByIdUseCase(IUserService userService, IMapper mapper) {
 
         _userService = userService;
+        _mapper = mapper;
     }
     
     public async Task<UserDto> Handle(GetUserQuery request, CancellationToken cancellationToken)
-        {
-            var user = await _userService.Get(request.Id);
-            var userDto = new UserDto 
-            {
-                  Id = user.Id,
-                  Username = user.Username,
-                  EmailAddress = user.EmailAddress,
-                  RegistrationDate = user.RegistrationDate
-            };
+    {
+        
+        var userDto = _mapper.Map<User,UserDto>(await _userService.Get(request.Id));
 
-             if (user == null)
-                 throw new EntityNotFoundException("User", request.Id.ToString());
-                     
+            if (userDto == null)
+                throw new EntityNotFoundException("User", request.Id.ToString());
+                    
 
-            return userDto;
-        }
+        return userDto;
+    }
 }
