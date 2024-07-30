@@ -19,6 +19,8 @@
     <ProjectReference Include="..\MicroserviceTemplate.Application.UseCase\MicroserviceTemplate.Application.UseCase.csproj" />
     <ProjectReference Include="..\MicroserviceTemplate.Domain.Contract\MicroserviceTemplate.Domain.Contract.csproj" />
     <ProjectReference Include="..\MicroserviceTemplate.Domain.Service\MicroserviceTemplate.Domain.Service.csproj" />
+    <ProjectReference Include="..\MicroserviceTemplate.Infrastructure\MicroserviceTemplate.Infrastructure.csproj" />
+    <ProjectReference Include="..\MicroserviceTemplate.Infrastructure.Contract\MicroserviceTemplate.Infrastructure.Contract.csproj" />
   </ItemGroup>
 
 </Project>
