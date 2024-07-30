@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\MicroserviceTemplate.Domain\MicroserviceTemplate.Domain.csproj" />
+    <ProjectReference Include="..\MicroserviceTemplate.Infrastructure.Contract\MicroserviceTemplate.Infrastructure.Contract.csproj" />
+  </ItemGroup>
+
+</Project>
