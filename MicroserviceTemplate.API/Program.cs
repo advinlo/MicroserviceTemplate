@@ -4,6 +4,8 @@ using MicroserviceTemplate.Application.UseCase;
 using System.Configuration;
 using System.Reflection;
 using MicroserviceTemplate.API;
+using MicroserviceTemplate.Application.Mappper;
+using AutoMapper;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,9 +16,10 @@ ServiceRegistration.Register(builder.Services);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
-    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Microservice Template API", Version = "v1" });
-    
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Microservice Template API", Version = "v1" });    
 });
+
+builder.Services.AddAutoMapper(typeof(MapperProfile).Assembly);
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetUserByIdUseCase).Assembly));
