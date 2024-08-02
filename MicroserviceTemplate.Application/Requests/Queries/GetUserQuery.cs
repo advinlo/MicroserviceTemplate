@@ -2,7 +2,7 @@ using MediatR;
 using MicroserviceTemplate.Application.DTOs;
 using System.Collections.Generic;
 
-namespace MicroserviceTemplate.Application.Queries {
+namespace MicroserviceTemplate.Application.Request.Queries {
 
     public class GetUserQuery : IRequest<UserDto>
     {

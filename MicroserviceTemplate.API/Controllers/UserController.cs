@@ -2,7 +2,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using MicroserviceTemplate.Application.DTOs;
 using MicroserviceTemplate.Application.Exceptions;
-using MicroserviceTemplate.Application.Queries;
+using MicroserviceTemplate.Application.Request.Queries;
 
 namespace MicroserviceTemplate.API.Controllers
 {
