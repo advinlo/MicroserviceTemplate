@@ -27,7 +27,7 @@ public class GetUserByIdHandler : IRequestHandler<GetUserQuery, UserDto>
     public async Task<UserDto> Handle(GetUserQuery request, CancellationToken cancellationToken)
     {
         
-        var userDto = _mapper.Map<User,UserDto>(await _userRepository.GetById(request.Id));
+        var userDto = _mapper.Map<User?,UserDto?>(await _userRepository.GetById(request.Id));
 
             if (userDto == null)
                 throw new EntityNotFoundException("User", request.Id.ToString());

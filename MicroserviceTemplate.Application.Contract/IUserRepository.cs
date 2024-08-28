@@ -4,6 +4,6 @@ namespace MicroserviceTemplate.Application.Contract;
 
 public interface IUserRepository
 {
-    Task<User> GetById(Guid id);
-    Task<User> GetByEmail(string emailAddress);
+    Task<User?> GetById(Guid id);
+    Task<User?> GetByEmail(string emailAddress);
 }
