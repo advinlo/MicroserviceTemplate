@@ -12,7 +12,6 @@
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.16" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.20" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.20" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
@@ -20,7 +19,6 @@
     <ProjectReference Include="..\MicroserviceTemplate.Application\MicroserviceTemplate.Application.csproj" />
     <ProjectReference Include="..\MicroserviceTemplate.Application.Contract\MicroserviceTemplate.Application.Contract.csproj" />
     <ProjectReference Include="..\MicroserviceTemplate.Infrastructure\MicroserviceTemplate.Infrastructure.csproj" />
-
   </ItemGroup>
 
 </Project>

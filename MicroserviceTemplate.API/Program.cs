@@ -3,9 +3,11 @@ using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using MicroserviceTemplate.Application;
 using System.Reflection;
+
 using MicroserviceTemplate.API;
 using MicroserviceTemplate.Application.Mappper;
 using MicroserviceTemplate.Infrastructure;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
