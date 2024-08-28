@@ -1,16 +1,20 @@
 using MediatR;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
 using MicroserviceTemplate.Application;
-using System.Configuration;
 using System.Reflection;
 using MicroserviceTemplate.API;
 using MicroserviceTemplate.Application.Mappper;
-using AutoMapper;
+using MicroserviceTemplate.Infrastructure;
 
 
 var builder = WebApplication.CreateBuilder(args);
+var Configuration = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json", optional: false)
+    .Build();
 
 builder.Services.AddControllers();
+builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer());
 ServiceRegistration.Register(builder.Services);
 
 builder.Services.AddEndpointsApiExplorer();
