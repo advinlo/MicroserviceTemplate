@@ -8,7 +8,7 @@ namespace MicroserviceTemplate.API.Controllers
 {
 
     [ApiController]
-    [Route("/users/api/userController")]
+    [Route("/api/users")]
     public class UserController : ControllerBase
     {
         private readonly ILogger<UserController> _logger;
