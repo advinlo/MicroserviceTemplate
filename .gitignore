@@ -76,3 +76,4 @@ _ncrunch_*
 *.userosscache
 *.sln.docstates
 
+MicroserviceTemplate.API/appsettings.Development.json
