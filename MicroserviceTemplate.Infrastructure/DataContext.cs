@@ -3,13 +3,12 @@ using MicroserviceTemplate.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-
 namespace MicroserviceTemplate.Infrastructure;
 
 
 public class DataContext : DbContext
 {
-    protected readonly IConfiguration Configuration;
+    protected readonly IConfiguration Configuration;   
 
     public DataContext(IConfiguration configuration)
     {
@@ -17,8 +16,7 @@ public class DataContext : DbContext
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-
+    {      
     }
 
     public void ApplyMigrations()
@@ -30,7 +28,7 @@ public class DataContext : DbContext
     {
         options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
     }
-    public DbSet<User> Users { get; set; }    
 
+    public DbSet<User> Users { get; set; }
 
 }

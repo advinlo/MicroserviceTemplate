@@ -16,8 +16,8 @@ var Configuration = new ConfigurationBuilder()
     .Build();
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer());
-ServiceRegistration.Register(builder.Services);
+
+builder.Services.AddDbContext<DataContext>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -29,6 +29,9 @@ builder.Services.AddAutoMapper(typeof(MapperProfile).Assembly);
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetUserByIdHandler).Assembly));
+
+ServiceRegistration.Register(builder.Services);
+
 var app = builder.Build();
 
 
@@ -52,5 +55,15 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+  try
+        {
+            var dataContext = app.Services.GetRequiredService<DataContext>();
+            dataContext.Database.Migrate();
+        }
+        catch(Exception ex)
+        {
+            app.Logger.LogError(@"Error applying migrations: " + ex.Message);
+        }
 
 app.Run();
